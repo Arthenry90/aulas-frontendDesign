@@ -1,0 +1,69 @@
+div {
+    background-color: green;
+    width: 300px;
+    color: white;
+    padding: 0 10px;
+}
+
+div:hover {
+    background-color: black;
+    padding: 10px 40px;
+}
+
+.ativar {
+    margin: 30px 0px;
+    padding: 8px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+}
+
+.ativar:active {
+    background-color: red;
+}
+
+input[type='text']:focus {
+    border: solid 3px green;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* li:first-child{
+    color: orange;
+}
+
+li:last-child{
+    color: green;
+} */
+
+/* li:nth-child(2n+1){
+    color: green;
+
+} */
+
+li:not(.exemplo) {
+    color: green
+}
+
+:checked {
+    margin-left: 30px;
+}
+
+input[type="text"]:disabled {
+    background: red;
+}
+
+p::first-letter {
+    color: red;
+    font-size: xx-large;
+}
+
+p::first-line {
+    text-transform: uppercase;
+
+    color: blue;
+}
+
+p::selection {
+    background-color: red;
+    font-size: 2000px;
+}
