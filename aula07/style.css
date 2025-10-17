@@ -1,0 +1,33 @@
+div.vazio{
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+    position: absolute;
+    left: 200px;
+    top: 150px;
+}
+
+div.transform{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    background-color: red;
+    transform: rotate(30deg);
+}
+
+
+div.transition{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    transition: all 1s;
+}
+
+div.transition:hover{
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    background-color: lightblue;
+}
