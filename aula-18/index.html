@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        @keyframes fade {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        @keyframes wiggle {
+          0%,
+          100% {
+            transform: rotate(-3deg);
+          }
+          50% {
+            transform: rotate(3deg);
+          }
+        }
+        .animate-fade {
+          animation: fade 1s ease-in-out infinite;
+        }
+        .animate-wiggle {
+          animation: wiggle 0.5s ease-in-out infinite;
+        }
+      }
+    </style>
+  </head>
+  <body class="m-8">
+    <div class="w-10 h-10 bg-blue-500 rounded-full animate-fade">TXT</div>
+    <div class="p-4 bg-green-300 rounded animate-fade w-20">Fade</div>
+    <button class="animate-wiggle">Treme</button>
+    <div class="animate-wiggle w-40 h-10 bg-green-500 rounded-full"></div>
+    <div class="animate-fade w-10 h-10 bg-yellow-400 rounded-full"></div>
+
+    <div class="opacity-0 transition-opacity duration-700" data-observe>
+      Aparece ao rolar!
+    </div>
+
+    <!-- JS -->
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100");
+          }
+        });
+      });
+      document
+        .querySelectorAll("[data-observe]")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
