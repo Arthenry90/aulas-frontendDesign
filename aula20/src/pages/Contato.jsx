@@ -27,8 +27,8 @@ function Contato(){
                     type="text" 
                     value={nome}
                     onChange={(m) => setNome(m.target.value)}
-                    className='w-full p-3 border-gray-300 rounded-b-lg focus:outline-none
-                    focus:ring-purple-500'
+                    className='w-full p-3 border border-gray-300 rounded-b-lg focus:outline-none
+                    focus:ring-purple-500 focus:ring-2'
                     placeholder='Seu nome'
                     required
                     />
@@ -41,8 +41,8 @@ function Contato(){
                     type="email" 
                     value={email}
                     onChange={(m) => setEmail(m.target.value)}
-                    className='w-full p-3 border-gray-300 rounded-b-lg focus:outline-none
-                    focus:ring-purple-500'
+                    className='w-full p-3 border border-gray-300 rounded-b-lg focus:outline-none
+                    focus:ring-purple-500 focus:ring-2'
                     placeholder='seuemail@email.com'
                     required
                     />
@@ -55,8 +55,8 @@ function Contato(){
                     value={mensagem}
                     onChange={(m) => setMensagem(m.target.value)}
                     rows="4"
-                    className='w-full p-3 border-gray-300 rounded-b-lg focus:outline-none
-                    focus:ring-purple-500'
+                    className='w-full p-3 border border-gray-300 rounded-b-lg focus:outline-none
+                    focus:ring-purple-500 focus:ring-2'
                     placeholder='Sua mensagem...'
                     required
                     />
